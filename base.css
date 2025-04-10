@@ -1,0 +1,262 @@
+html, body {
+    margin: 0;
+    height: 100vh;
+}
+body {
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    background-color: red;
+    min-height: 100vh;
+    z-index: 1;
+}
+.main {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+
+/* Estilizando o menu lateral */
+.menu {
+    position: fixed;
+    top: 0;
+    left: -350px; /* Começa fora da tela */
+    width: 250px;
+    height: 100%;
+    background-color: #2b6ab0;
+    color: white;
+    padding: 20px;
+    background-image: url(img/logo-menu.png);
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: left 0.3s ease-in-out;
+    box-shadow: 12px 5px 10px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+}
+
+/* Itens do menu */
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    padding: 10px;
+    border-bottom: 1px solid #000000;
+}
+
+.menu-icon {
+    width: 280%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Botão para abrir o menu */
+.menu-btn {
+    width: 1%;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
+    position: fixed;
+    margin-left: 2%;
+    margin-top: 2%;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.15s ease-in, visibility 0.3s ease-in;
+}
+    /* Botão para fechar */
+.close-btn {
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    float: right;
+}
+
+/* Checkbox oculto */
+.menu-checkbox {
+    display: none;
+}
+
+/* Quando o checkbox está marcado, o menu aparece */
+.menu-checkbox:checked ~ .menu {
+    left: 0;
+}
+
+/* Quando o menu está aberto, esconde o botão ☰ */
+.menu-checkbox:checked ~ .menu-btn {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Faz o botão ☰ reaparecer com atraso */
+.menu-checkbox:not(:checked) ~ .menu-btn {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.3s;
+}
+
+.header {
+    background-color: #9cd21d;
+    min-height: 10px;
+    text-align: center;
+}
+.content {
+    font-size: 18px;
+    background-color: white;
+    min-height: 480px;
+    padding: 20px;
+    flex-grow: 1;
+    text-align: justify;
+    background-image: linear-gradient(rgba(100, 100, 100, 0.55), rgba(100, 100, 100, 0.9)),
+    url(https://blog.7mboots.com.br/wp-content/uploads/2025/01/blog-783.jpg); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+.footer {
+    background-color: #9cd21d;
+    min-height: 50px;
+}
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; 
+}
+
+.container {
+    display: flex; /* Deixa os elementos lado a lado */
+    justify-content: space-between; /* Espaço entre mapa e formulário */
+    align-items: flex-start;
+    max-width: 1650px; 
+    padding: 20px;
+    gap: 0px;
+    margin-top: -35px;
+}
+
+/* Estilização do bloco de informações */
+.info {
+    flex: 1; /* Ocupa todo o espaço possível */
+}
+
+/* Estilização do formulário */
+.formulario {
+    width: 25%; /* Define um tamanho responsivo para o formulário */
+    height: 400px;
+    background: #f8f8f8; /* Fundo levemente cinza */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    margin-top: -20px;
+    margin-right: 1%;
+}
+
+/* Ajustes nos inputs e textarea */
+form input, form textarea {
+    width: 93%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Botões do formulário */
+form input[type="submit"], form input[type="reset"] {
+    background: #2e71b4;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 48%;
+}
+
+form input[type="submit"]:hover, form input[type="reset"]:hover {
+    background: #1c4f80;
+}
+
+.logo{
+    width: 25%;
+    height: auto;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+}
+
+.table{
+    width: 40%;
+    border-collapse: collapse;
+    text-align: center;
+    border: 1px solid black;
+    background-color: lightgray;
+}
+
+.table-header{
+    background-color: rgb(110, 110, 110);
+    font-weight: bold;
+}
+
+  .oval {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+  }
+  
+  .row {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+  }
+  
+  .box {
+    width: 20%;
+    height: 50%;
+    background-color: #2e71b4;
+    border: 3px solid #ffffff;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .line {
+    position: absolute;
+    background-color: #2e71b4;
+  }
+  
+  /* Linhas horizontais */
+  .h-line {
+    height: 3px;
+    width: 45%;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+  }
+
+  .espacamento1{
+    margin: 0 0 4% 0;
+  }
+
+  .espacamento2{
+    margin: 0 0 5% 0;
+  }
