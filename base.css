@@ -25,6 +25,7 @@ body {
 /* Estilizando o menu lateral */
 .menu {
     position: fixed;
+    font-size: 20px;
     top: 0;
     left: -350px; /* Começa fora da tela */
     width: 250px;
@@ -32,7 +33,7 @@ body {
     background-color: #2b6ab0;
     color: white;
     padding: 20px;
-    background-image: url(logo-menu.png);
+    background-image: url(img/logo-menu.png);
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
@@ -114,7 +115,7 @@ body {
     text-align: center;
 }
 .content {
-    font-size: 18px;
+    font-size: 24px;
     background-color: white;
     min-height: 480px;
     padding: 20px;
@@ -142,7 +143,7 @@ a:hover {
     display: flex; /* Deixa os elementos lado a lado */
     justify-content: space-between; /* Espaço entre mapa e formulário */
     align-items: flex-start;
-    max-width: 1650px; 
+    max-width: 1850px; 
     padding: 20px;
     gap: 0px;
     margin-top: -35px;
@@ -155,8 +156,8 @@ a:hover {
 
 /* Estilização do formulário */
 .formulario {
-    width: 25%; /* Define um tamanho responsivo para o formulário */
-    height: 400px;
+    width: 22%; /* Define um tamanho responsivo para o formulário */
+    height: 540px;
     background: #f8f8f8; /* Fundo levemente cinza */
     padding: 20px;
     border-radius: 10px;
@@ -225,7 +226,7 @@ form input[type="submit"]:hover, form input[type="reset"]:hover {
   
   .box {
     width: 20%;
-    height: 50%;
+    height: 100px;
     background-color: #2e71b4;
     border: 3px solid #ffffff;
     border-radius: 30px;
@@ -237,11 +238,12 @@ form input[type="submit"]:hover, form input[type="reset"]:hover {
     text-align: center;
     padding: 10px;
     box-sizing: border-box;
+    font-size: 20px;
   }
   
   .line {
     position: absolute;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
   }
   
   /* Linhas horizontais */
@@ -254,9 +256,9 @@ form input[type="submit"]:hover, form input[type="reset"]:hover {
   }
 
   .espacamento1{
-    margin: 0 0 4% 0;
+    margin: 0 0 5% 0;
   }
 
   .espacamento2{
-    margin: 0 0 5% 0;
+    margin: 0 0 6% 0;
   }
